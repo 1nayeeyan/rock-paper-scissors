@@ -2,7 +2,8 @@
     let playerCount = 0;
     let compCount = 0;
 //creating a random choice of the three for the computer
-    while (playerCount < 5 || compCount < 5) { 
+
+    while (playerCount <= 5 || compCount <= 5) { 
 
     let computerSelection;
 function computerplay(){
@@ -26,18 +27,8 @@ computerplay();
 
 //input from player
 let playerSelection = window.prompt('rock, paper or scissors?')
-/*
-function checktype(playerSelection){
-  if (playerSelection == typeof(String)){
-      game();
-  } else{
-      window.prompt('type in either rock, paper or scissors');
-  }
-  while(playerSelection !== typeof(String)){
-    checktype();
-}
-}
-*/
+playerSelection.toLocaleLowerCase();
+
 
 //checking to see the winner
 function game(playerSelection, computerSelection) {
@@ -45,10 +36,10 @@ function game(playerSelection, computerSelection) {
        case 'rock':
            if (playerSelection == 'paper'){
                console.log("your paper covered the computer's rock!");
-               playerCount ++;
+               return playerCount ++;
            } else if (playerSelection == 'scissors'){
                console.log("the computer's rock crushed your scissors!");
-               compCount ++;
+               return compCount ++;
            } else {
                console.log("it's a draw!");
            }
@@ -56,10 +47,10 @@ function game(playerSelection, computerSelection) {
         case 'paper':
             if (playerSelection == 'rock'){
                 console.log("the computer's paper covered your rock!");
-                compCount ++;
+                return compCount ++;
             } else if (playerSelection == 'scissors'){
                 console.log("you cut the computer's paper!");
-                playerCount ++;
+                return playerCount ++;
             } else {
                 console.log("it's a draw");
             }
@@ -67,10 +58,10 @@ function game(playerSelection, computerSelection) {
         case 'scissors':
             if (playerSelection == 'rock'){
                 console.log("you crushed the computer's scissors!")
-                playerCount ++;
+                return playerCount ++;
             } else if (playerSelection == 'paper') {
                 console.log('"the computer cut your paper!')
-                compCount ++;
+                return compCount ++;
             } else {
                 console.log("it's a draw!")
             }
@@ -80,10 +71,16 @@ function game(playerSelection, computerSelection) {
     game(playerSelection, computerSelection);
     console.log("you've won " + playerCount +  " rounds");
     console.log("the computer's won " + compCount + " rounds");
-}
+    console.log(" ");
 
+    //stop game after 5 wins for either player
     if (playerCount == 5){
         console.log("you won 5 rounds congratulations! refresh the page to play again");
+        break;
     } else if (compCount == 5) {
         console.log("the computer won! refresh the page to play again");
+        break;
     }
+}
+
+    
