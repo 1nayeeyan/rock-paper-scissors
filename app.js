@@ -26,6 +26,7 @@ function computerplay(){
 computerplay();
 
 //input from player
+window.focus();
 let playerSelection = window.prompt('rock, paper or scissors?')
 playerSelection.toLocaleLowerCase();
 
