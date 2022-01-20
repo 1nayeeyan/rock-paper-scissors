@@ -14,6 +14,7 @@
     const paperDiv = document.getElementById("paper");
     const scissorsDiv = document.getElementById("scissors");
 
+
     //stop game after 5 wins for either player
     function gameCheck(){
         if (playerCount == 5){
@@ -120,6 +121,5 @@
 
 
     
-
 
 
