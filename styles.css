@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background: blanchedalmond;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header > h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, sans-serif;
+    font-size: 40px
+}
+
+body {
+    background: rgb(13,10,10);
+}
+
+.scoreboard {
+    border: 3px solid white;
+    padding: 60px;
+    margin: 40px auto; /*auto centers the scoreboard*/
+    width: 300px;
+    color: blanchedalmond;
+    position: relative;
+}
+
+
+.badge {
+    background:mediumorchid;
+    text-align: center;
+    font-family: Georgia, sans-serif;
+    padding: 3px 8px
+}
+
+#player-label{
+    position: absolute;
+    left: -35px;
+    top: 50px;
+}
+
+#bot-label{
+    position: absolute;
+    right: -22.5px;
+    top: 50px;
+}
+
+#player-score{
+    position: absolute;
+    left:100px;
+    top: 30px;
+    font-size: 50px;
+}
+
+#bot-score{
+    position: absolute;
+    right:100px;
+    top: 30px;
+    font-size: 50px;
+}
+
+.result{
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 50px;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+}
+
+.choices{
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.choice{
+    display: inline-flex;
+    border: 3px solid blanchedalmond;
+    border-radius: 50%;
+    padding: 25px 25px;
+    margin: 20px;
+    transition: all 0.3s ease; /*color of icon selected changes slower*/
+}
+
+.choice:hover{
+    cursor: pointer;
+    background: rgba(255, 235, 205, 0.95);
+}
+
+#action-message{
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+}
